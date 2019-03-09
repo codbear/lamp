@@ -28,3 +28,13 @@ apt install -y mariadb-server
 systemctl start mariadb
 mysql_secure_installation
 mysql
+
+# Install and configure phpMyAdmin
+wget https://files.phpmyadmin.net/phpMyAdmin/4.8.5/phpMyAdmin-4.8.5-all-languages.tar.gz
+tar xzvf phpMyAdmin-4.8.5-all-languages.tar.gz
+mv phpMyAdmin-4.8.5-all-languages /usr/share/phpmyadmin
+chmod -R 0755 /usr/share/phpmyadmin
+cp conf/phpmyadmin.conf /etc/apache2/conf-available/
+a2enconf phpmyadmin
+systemctl restart apache2
+rm phpMyAdmin-4.8.5-all-languages.tar.gz
