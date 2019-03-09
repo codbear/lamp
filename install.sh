@@ -38,3 +38,6 @@ cp conf/phpmyadmin.conf /etc/apache2/conf-available/
 a2enconf phpmyadmin
 systemctl restart apache2
 rm phpMyAdmin-4.8.5-all-languages.tar.gz
+
+# Enable Apache 2 and MariaDB to run on system startup
+systemctl enable apache2 mariadb
