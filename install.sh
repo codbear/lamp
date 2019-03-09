@@ -2,7 +2,7 @@
 
 # Install some usefull tools
 apt update
-apt install -y net-tools sudo wget curl bash-completion ca-certificates apt-transport-https git
+apt install -y net-tools curl bash-completion ca-certificates apt-transport-https
 
 # Install Apache 2
 apt install -y apache2 apache2-doc
