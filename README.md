@@ -25,7 +25,7 @@ ___
 ```bash
 sudo apt install -y wget git
 git clone https://github.com/codbear/lamp.git
-cd LAMP
+cd lamp
 chmod 755 *.sh
 sudo ./lamp.sh
 ```
