@@ -22,3 +22,9 @@ echo "<?php phpinfo(); ?>" | tee /var/www/html/info.php
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 chmod +x /usr/local/bin/composer
+
+# Install and configure MariaDB
+apt install -y mariadb-server
+systemctl start mariadb
+mysql_secure_installation
+mysql
