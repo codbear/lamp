@@ -17,3 +17,8 @@ apt update
 apt upgrade -y
 apt install -y php7.3 php7.3-cli php7.3-common php7.3-curl php7.3-mbstring php7.3-mysql php7.3-xml php7.3-gd php7.3-xmlrpc
 echo "<?php phpinfo(); ?>" | tee /var/www/html/info.php
+
+# Install composer
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+chmod +x /usr/local/bin/composer
